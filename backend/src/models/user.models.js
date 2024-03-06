@@ -94,8 +94,8 @@ userSchema.methods.generateRefreshToken = function () {
     );
 }
 
-
-export const User = mongoose.model("User", userSchema); //exporting userSchema that name is User when we exporting 
+//exporting userSchema that name is User when we exporting 
+export const User = mongoose.model("User", userSchema);
 
 
 // async version of upper code 

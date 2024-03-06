@@ -17,6 +17,13 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(express.static("public"));
 
 // for access cookie from user browser and set cookies 
-app.use(express.cookieParser());
+app.use(cookieParser());
+
+// import routes from routes folder
+import userRouter from './routes/user.routes.js';
+
+// routes declration
+// we use middleware here beacuse file is seprate 
+app.use("/api/v1/users", userRouter);
 
 export { app };
